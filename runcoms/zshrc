@@ -28,20 +28,32 @@ export EDITOR="/usr/bin/vim"
 export VISUAL="/usr/bin/vim"
 
 bindkey -v
-bindkey '^P' up-history
-bindkey '^N' down-history
-bindkey '^?' backward-delete-char
-bindkey '^h' backward-delete-char
-bindkey '^w' backward-kill-word
-bindkey '^r' history-incremental-search-backward
 export KEYTIMEOUT=1
 
-# zle -N zle-line-init
-# zle -N zle-keymap-select
+# bindkey '^P' up-history
+# bindkey '^N' down-history
+# bindkey '^?' backward-delete-char
+# bindkey '^h' backward-delete-char
+bindkey '^w' backward-kill-word
+bindkey '^r' history-incremental-search-backward
 
-# Who doesn't want home and end to work?
+bindkey '^[.' insert-last-word
+bindkey '^[0' digit-argument
+bindkey '^[1' digit-argument
+bindkey '^[2' digit-argument
+bindkey '^[3' digit-argument
+bindkey '^[4' digit-argument
+bindkey '^[5' digit-argument
+bindkey '^[6' digit-argument
+bindkey '^[7' digit-argument
+bindkey '^[8' digit-argument
+bindkey '^[9' digit-argument
+
+bindkey '^a' beginning-of-line
 bindkey '\e[1~' beginning-of-line
+bindkey '^e' end-of-line
 bindkey '\e[4~' end-of-line
+
 # Incremental search is elite!
 bindkey -M vicmd "/" history-incremental-search-backward
 bindkey -M vicmd "?" history-incremental-search-forward
@@ -53,3 +65,6 @@ bindkey "\eOP" run-help
 bindkey -M vicmd "q" push-line
 # it's like, space AND completion.  Gnarlbot.
 bindkey -M viins ' ' magic-space
+
+# zle -N zle-line-init
+# zle -N zle-keymap-select
