@@ -23,6 +23,7 @@ fi
 
 # Customize to your needs...
 source ~/.alias
+alias -s org="emacsclient -t"
 
 export EDITOR="/usr/bin/vim"
 export VISUAL="/usr/bin/vim"
