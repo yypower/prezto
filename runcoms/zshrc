@@ -31,6 +31,8 @@ export VISUAL="/usr/bin/vim"
 bindkey -v
 export KEYTIMEOUT=1
 
+unsetopt share_history
+
 # bindkey '^P' up-history
 # bindkey '^N' down-history
 # bindkey '^?' backward-delete-char
