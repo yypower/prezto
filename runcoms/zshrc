@@ -16,6 +16,8 @@ if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
   source "${ZDOTDIR:-$HOME}/.zprezto/init.zsh"
 fi
 
+$(fasd --init auto)
+
 # set PATH so it includes user's private bin if it exists
 if [ -d "$HOME/bin" ] ; then
     PATH="$HOME/bin:$PATH"
@@ -27,6 +29,8 @@ alias -s org="emacsclient -t"
 
 export EDITOR="/usr/bin/vim"
 export VISUAL="/usr/bin/vim"
+
+export GOPATH=$HOME
 
 bindkey -v
 export KEYTIMEOUT=1
