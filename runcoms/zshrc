@@ -31,7 +31,6 @@ export EDITOR="/usr/bin/vim"
 export VISUAL="/usr/bin/vim"
 
 export GOPATH=$HOME
-
 bindkey -v
 export KEYTIMEOUT=1
 
